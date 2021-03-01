@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-image: url(../../images/films.png);
+    padding: 20px 50px 100px 50px;
+    box-sizing: border-box;
+    background-size: contain;
+}

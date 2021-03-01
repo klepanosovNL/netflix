@@ -1,0 +1,21 @@
+.search {
+    width: 100%;
+    padding: 0 50px;
+
+    h1 {
+        color: white;
+        text-transform: uppercase;
+    }
+
+    input {
+        width: calc(100% - 130px);
+        background-color: grey;
+        margin-right: 10px;
+        opacity: .5;
+        padding: 9px;
+
+        &::placeholder {
+            color: white;
+        }
+    }
+}

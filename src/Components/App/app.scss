@@ -1,0 +1,15 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+
+#root {
+    background-color: black
+}
+
+.main {
+    background-color: #232323;
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,14 @@
+.filter {
+    margin-right: auto;
+    display: flex;
+
+    a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+            
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}

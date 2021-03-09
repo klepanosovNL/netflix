@@ -7,7 +7,7 @@ const ErrorBoundary = (props) => {
         </h2>
     )
 
-    let isOk = false;
+    let isOk = true;
 
     return <>{isOk ? props.children : <OopsText />}</>
 }

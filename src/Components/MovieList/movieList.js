@@ -1,4 +1,6 @@
 import React from 'react';
+import MovieSettings from '../MovieSettings';
+
 import './movieList.scss';
 
 const MovieList = () => {
@@ -24,9 +26,11 @@ const MovieList = () => {
             year: '2004'
         }
     ];
+
     const listItems = movies.map((item) => {
         return (
             <div className="movie" key={item.name.toString()}>
+                <MovieSettings />
                 <span className="movie__name">{item.name}</span>
                 <span className="movie__year">{item.year}</span>
                 <div className="movie__describe">{item.describe}</div>

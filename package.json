@@ -29,6 +29,7 @@
   "keywords": [],
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "bootstrap": "^4.6.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",

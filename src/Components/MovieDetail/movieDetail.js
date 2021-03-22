@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Logo from '../Logo';
 import './movieDetail.scss';
 
-const MovieDetail = () => {
+const MovieDetail = ({ currentMovie }) => {
     return (
         <>
             <div className='movie__detail'>
@@ -11,7 +11,7 @@ const MovieDetail = () => {
                 <div className="movie__image"></div>
                 <div className='movie__section-description'>
                     <div className='movie__title'>
-                        <span className='movie__name'>Movie's name</span>
+                        <span className='movie__name'>{currentMovie.name}</span>
                         <span className='movie__rating'>2.3</span>
                     </div>
                     <div className='movie__subtitle'>subtitle</div>

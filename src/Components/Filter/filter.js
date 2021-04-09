@@ -1,17 +1,25 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
 import './filter.scss';
+import { Link } from "react-router-dom";
+import { setFilter } from '../actions';
+
 
 const Filter = () => {
+    const dispatch = useDispatch();
+
     const filterItems = ['all', 'documentary', 'comedy', 'horror', 'crime'];
     const listItems = filterItems.map((item) => 
-        <a href={item} key={item.toString()}>
+        <Link to={`/${item}`} key={item.toString()} onClick={() => dispatch(setFilter(item.toString()))}>
             {item}
-        </a>);
+        </Link>
+    );
 
     return (
         <div className="filter">
             {listItems}
         </div>
+
     )
 }
 

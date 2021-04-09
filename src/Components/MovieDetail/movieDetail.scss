@@ -6,6 +6,8 @@
         background-image: url(../../images/films.png);
         padding: 70px 30px 30px 30px;
         box-sizing: border-box;
+        max-width: 1600px;
+        margin: 0 auto;
 
         .backToSearch {
             height: 20px;
@@ -47,13 +49,7 @@
     }
 
     &__image {
-        height: 250px;
         max-width: 250px;
-        width: 100%;
-        background-image: url(../../images/template.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color:grey;
     }
 
     &__subtitle {

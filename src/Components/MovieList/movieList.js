@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import MovieSettings from '../MovieSettings';
 
 import './movieList.scss';
@@ -6,11 +6,20 @@ import './movieList.scss';
 const MovieList = ({ movieList, setMovie }) => {
     const listItems = movieList.map((item) => {
         return (
-            <div className="movie" key={item.name.toString()} onClick={() => setMovie(item)}>
-                <MovieSettings />
-                <span className="movie__name">{item.name}</span>
-                <span className="movie__year">{item.year}</span>
-                <div className="movie__describe">{item.describe}</div>
+            <div className="movie" key={item.title.toString()} 
+                onClick={() => {
+                    setMovie(item);
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                      });
+                }}
+            >
+                <MovieSettings movie={item} />
+                <img src={item.poster_path}></img>
+                <span className="movie__name">{item.title}</span>
+                <span className="movie__year">{item.release_date}</span>
+                <div className="movie__describe">{item.overview}</div>
             </div>
         )
     })

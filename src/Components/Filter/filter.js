@@ -7,7 +7,6 @@ import { setFilter } from '../actions';
 
 const Filter = () => {
     const dispatch = useDispatch();
-
     const filterItems = ['all', 'documentary', 'comedy', 'horror', 'crime'];
     const listItems = filterItems.map((item) => 
         <Link to={`/${item}`} key={item.toString()} onClick={() => dispatch(setFilter(item.toString()))}>

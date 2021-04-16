@@ -13,6 +13,7 @@ import CounterMovies from '../CounterMovies';
 import ErrorBoundary from '../ErrorBoundary';
 import MovieDetail from '../MovieDetail';
 import CustomModal from '../CustomModal';
+import PageNotFound from '../PageNotFound';
 
 const App = () => {
     const [currentMovie, setCurrentMovie] = useState(null);
@@ -29,6 +30,22 @@ const App = () => {
         <>
             <Router>
                 <Switch>
+                    <Route exact path='/'>
+                        {
+                            !currentMovie ?
+                                <Header /> :
+                                <MovieDetail currentMovie={currentMovie} />
+                        }
+                        <div className='main'>
+                            <Navigation />
+                            <CounterMovies />
+                            <CustomModal />
+                            <ErrorBoundary>
+                                <MovieList movieList={movies} setMovie={setCurrentMovie} />                    
+                            </ErrorBoundary>
+                        </div>
+                        <Footer />
+                    </Route>
                     <Route path='/*'>
                         {
                             !currentMovie ?
@@ -45,11 +62,11 @@ const App = () => {
                         </div>
                         <Footer />
                     </Route>
+                    <Route render={() => <PageNotFound />}></Route>
                 </Switch>
             </Router>
         </>
     )
-
 }
 
 export default App;

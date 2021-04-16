@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './errorBoundary.scss';
 
-const ErrorBoundary = (props) => {
-    const OopsText = () => (
-        <h2>
-            Oops, something went wrong... We are dooing our the best to fix the issue
-        </h2>
-    )
+export default class ErrorBoundary extends Component {
 
-    let isOk = true;
+    state = {
+        hasError: false
+    }
 
-    return <>{isOk ? props.children : <OopsText />}</>
+    componentDidCatch() {
+        this.setState({hasError: true})
+    }
+
+    render() {
+        if (this.state.hasError) {
+            return (
+                <h2>
+                    Oops, something went wrong... We are dooing our the best to fix the issue
+                </h2>
+            )
+        } else {
+            return this.props.children;
+        }
+    }
 }
-
-export default ErrorBoundary

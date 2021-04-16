@@ -8,20 +8,18 @@ const MovieDetail = ({ currentMovie }) => {
             <div className='movie__detail'>
                 <Logo />
                 <a className="backToSearch" href="#"></a>
-                <div className="movie__image"></div>
+                <img src={currentMovie.poster_path} className="movie__image"></img>
                 <div className='movie__section-description'>
                     <div className='movie__title'>
-                        <span className='movie__name'>{currentMovie.name}</span>
-                        <span className='movie__rating'>2.3</span>
+                        <span className='movie__name'>{currentMovie.title}</span>
+                        <span className='movie__rating'>{currentMovie.vote_average}</span>
                     </div>
-                    <div className='movie__subtitle'>subtitle</div>
+                    <div className='movie__subtitle'>{currentMovie.tagline}</div>
                     <div className='movie__info'>
-                        <span>1994</span>
-                        <span>124 min</span>
+                        <span>{currentMovie.release_date}</span>
+                        <span>{currentMovie.runtime} min</span>
                     </div>
-                    <div className='movie__description'>
-                        some description..
-                    </div>
+                    <div className='movie__description'>{currentMovie.overview}</div>
                 </div>
             </div>
         </>

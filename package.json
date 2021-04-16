@@ -31,14 +31,17 @@
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "bootstrap": "^4.6.0",
+    "formik": "^2.2.6",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.0",
     "react-dom": "^17.0.1",
+    "react-modal": "^3.13.1",
     "react-redux": "^7.2.2",
     "react-router": "^5.2.0",
     "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
     "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
@@ -47,12 +50,14 @@
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/plugin-transform-block-scoping": "^7.12.13",
     "@babel/plugin-transform-classes": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/plugin-transform-template-literals": "^7.12.13",
     "@babel/preset-env": "^7.12.17",
     "@babel/preset-react": "^7.12.13",
     "@babel/runtime-corejs3": "^7.13.8",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
     "core-js": "^2.6.12",
@@ -63,11 +68,13 @@
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^1.3.8",
     "node-sass": "^5.0.0",
+    "react-router-dom": "^5.2.0",
     "react-test-renderer": "^17.0.1",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.22.0",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "yup": "^0.32.9"
   }
 }
